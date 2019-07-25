@@ -1,0 +1,29 @@
+{
+    "md5": "",
+    "payload": {
+        "acr": "",
+        "guid": "",
+        "key": "",
+        "records": [
+            {
+                "endPosition": 9202,
+                "metadata": {
+                    "mchl_color": "yellow"
+                },
+                "startPosition": 9059,
+                "type": "kindle.highlight"
+            },
+            {
+                "endPosition": 9202,
+                "startPosition": 9202,
+                "text": "HELLOFANOTE",
+                "type": "kindle.note"
+            },
+            {
+                "location": 8730,
+                "type": "kindle.most_recent_read"
+            }
+        ],
+        "type": ""
+    }
+}
