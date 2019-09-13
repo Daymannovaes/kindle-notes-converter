@@ -21,11 +21,9 @@ const LOCATION_LENGTH = 150;
 
 let notes = [];
 
-let $ = 1;
 const run = async () => {
     const input = await readFileAsync(inputArg);
-    console.log(input.toString());
-    $ = cheerio.load(input.toString());
+    const $ = cheerio.load(input.toString());
 
     notes = $(NOTE_HTML_CLASS).map((i, el) => ({
         note: $(el).text(),
@@ -44,13 +42,9 @@ const run = async () => {
         if(note.note.match(/Note/)) return extractNote(note);
     });
 
-
-};
-async function run2() {
     let notesBuffer = new Uint8Array(Buffer.from(JSON.stringify(notes)));
     await writeFileAsync(outputArg, notesBuffer);
-}
-run2();
+};
 
 function extractHighlight(note) {
     const startPosition = getNotePosition(note.note);
